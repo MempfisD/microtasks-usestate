@@ -1,11 +1,20 @@
-import React from 'react';
-import './App.css';
+import React, { useState } from 'react'
+import './App.css'
 
 function App() {
+	// let a = 1
+	let [a, setA] = useState(1)
+
+	const onClickHandler = () => {
+		setA(++a)
+		console.log(a)
+	}
 	return (
-			<div className="App">
-			</div>
-	);
+		<div className='App'>
+			<h1>{a}</h1>
+			<button onClick={onClickHandler}>number</button>
+		</div>
+	)
 }
 
-export default App;
+export default App
